@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigma Platform | Architecture Evolution</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans">
+
+    <div id="app-container" class="min-h-screen flex flex-col">
+
+        <!-- Header -->
+        <header class="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-lg border-b border-gray-700/50">
+            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <div class="text-2xl font-bold text-white flex items-center">
+                    <span class="text-cyan-400">Σ</span>
+                    <span class="ml-2">Sigma Platform</span>
+                </div>
+                <ul class="flex space-x-8 text-sm font-medium items-center" id="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="background.html" class="nav-link">Project Background</a></li>
+                    <li><a href="evolution.html" class="nav-link">Architecture Evolution</a></li>
+                    <li><a href="platform_v2.html" class="nav-link">Platform v2.0</a></li>
+                    <li><a href="deliverables.html" class="nav-link">Deliverables</a></li>
+                    <li><a href="roadmap.html" class="nav-link">Roadmap</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow container mx-auto px-6 py-16">
+            <header class="text-center mb-16">
+                <h1 class="text-4xl sm:text-5xl font-bold text-white">From MVP to Enterprise Platform</h1>
+                <p class="mt-4 text-lg text-gray-400">A Strategic Technical Journey</p>
+                <div class="w-24 h-1 bg-cyan-400 mx-auto mt-6"></div>
+            </header>
+
+            <!-- Comparison Section -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                <!-- v1.0 Column -->
+                <div class="border border-gray-700 rounded-lg p-8 bg-gray-800/50">
+                    <h2 class="text-2xl font-bold text-white mb-2">v1.0 (MVP)</h2>
+                    <p class="text-cyan-400 font-medium mb-6">Simple Information Aggregator</p>
+                    <div class="prose prose-invert max-w-none text-gray-300">
+                        <p>The MVP was a linear, proof-of-concept pipeline designed for rapid validation. Its primary goal was to connect a few sources and prove the core value of automated task creation.</p>
+                        <h4 class="text-lg font-semibold text-white mt-8">Architecture:</h4>
+                        <div class="flex items-center space-x-2 text-sm text-gray-400 font-mono flex-wrap">
+                            <span>Connectors</span>
+                            <i data-lucide="arrow-right"></i>
+                            <span>RabbitMQ</span>
+                            <i data-lucide="arrow-right"></i>
+                            <span>Processor</span>
+                            <i data-lucide="arrow-right"></i>
+                            <span>Lark</span>
+                        </div>
+
+                        <h4 class="text-lg font-semibold text-white mt-8">Technology Stack:</h4>
+                        <div class="flex items-center space-x-4">
+                            <div class="tech-icon">
+                                <i data-lucide="box" class="w-8 h-8"></i>
+                                <span>K3s</span>
+                            </div>
+                            <div class="tech-icon">
+                                <i data-lucide="message-square" class="w-8 h-8"></i>
+                                <span>RabbitMQ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- v2.0 Column -->
+                <div class="border border-cyan-400/50 rounded-lg p-8 bg-gray-800/50 relative">
+                     <span class="absolute top-4 right-4 text-xs font-bold bg-cyan-400 text-gray-900 px-2 py-1 rounded-full">EVOLVED</span>
+                    <h2 class="text-2xl font-bold text-white mb-2">v2.0 (Platform)</h2>
+                    <p class="text-cyan-400 font-medium mb-6">Scalable Event-Driven Platform</p>
+                     <div class="prose prose-invert max-w-none text-gray-300">
+                        <p>Platform v2.0 is a complete architectural redesign, focused on scalability, robustness, and enabling advanced AI capabilities. It is built to be the enterprise-grade foundation for all future development.</p>
+                        <h4 class="text-lg font-semibold text-white mt-8">Architecture:</h4>
+                         <p class="text-sm">A decoupled, event-driven system where microservices communicate asynchronously via a central event bus, allowing for independent scaling and development.</p>
+
+                        <h4 class="text-lg font-semibold text-white mt-8">Technology Stack:</h4>
+                        <div class="flex items-start flex-wrap gap-4">
+                            <div class="tech-icon"><i data-lucide="server" class="w-8 h-8"></i><span>RKE2</span></div>
+                            <div class="tech-icon"><i data-lucide="workflow" class="w-8 h-8"></i><span>Kafka</span></div>
+                            <div class="tech-icon"><i data-lucide="database" class="w-8 h-8"></i><span>Redis</span></div>
+                            <div class="tech-icon"><i data-lucide="package-search" class="w-8 h-8"></i><span>Strimzi</span></div>
+                            <div class="tech-icon"><i data-lucide="github" class="w-8 h-8"></i><span>GitOps</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rationale for Change Section -->
+            <section class="mt-16 bg-gray-800/30 rounded-lg p-8">
+                <h2 class="text-2xl font-bold text-white text-center mb-6">Rationale for Change</h2>
+                <div class="prose prose-invert max-w-3xl mx-auto text-gray-300 text-center">
+                    <p>The evolution from v1.0 to v2.0 was a strategic decision driven by MVP feedback and long-term vision. The initial pipeline, while effective for validation, lacked the resilience and flexibility required for an enterprise-grade product. The shift was necessary for:</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8 max-w-5xl mx-auto">
+                    <div class="rationale-card">
+                        <i data-lucide="scaling" class="w-10 h-10 text-cyan-400 mb-3"></i>
+                        <h3 class="font-semibold text-lg text-white">Scalability</h3>
+                        <p class="text-sm text-gray-400">To handle massive data volumes from countless sources by replacing RabbitMQ with the distributed event streaming platform, Kafka.</p>
+                    </div>
+                    <div class="rationale-card">
+                        <i data-lucide="shield-check" class="w-10 h-10 text-cyan-400 mb-3"></i>
+                        <h3 class="font-semibold text-lg text-white">Robustness</h3>
+                        <p class="text-sm text-gray-400">To build a fault-tolerant system where individual component failures are isolated and do not bring down the entire platform.</p>
+                    </div>
+                     <div class="rationale-card">
+                        <i data-lucide="sparkles" class="w-10 h-10 text-cyan-400 mb-3"></i>
+                        <h3 class="font-semibold text-lg text-white">Future AI Capabilities</h3>
+                        <p class="text-sm text-gray-400">To create a flexible foundation for advanced, multi-agent AI workflows orchestrated with modern workflow engines and local LLMs.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 border-t border-gray-700/50">
+            <div class="container mx-auto px-6 py-4 text-center text-gray-500 text-sm">
+                &copy; 2025 Sigma Platform Project
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
+</body>
+</html>

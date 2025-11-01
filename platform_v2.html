@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigma Platform | Platform v2.0 Deep Dive</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans">
+
+    <div id="app-container" class="min-h-screen flex flex-col">
+
+        <!-- Header -->
+        <header class="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-lg border-b border-gray-700/50">
+            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <div class="text-2xl font-bold text-white flex items-center">
+                    <span class="text-cyan-400">Σ</span>
+                    <span class="ml-2">Sigma Platform</span>
+                </div>
+                <ul class="flex space-x-8 text-sm font-medium items-center" id="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="background.html" class="nav-link">Project Background</a></li>
+                    <li><a href="evolution.html" class="nav-link">Architecture Evolution</a></li>
+                    <li><a href="platform_v2.html" class="nav-link">Platform v2.0</a></li>
+                    <li><a href="deliverables.html" class="nav-link">Deliverables</a></li>
+                    <li><a href="roadmap.html" class="nav-link">Roadmap</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow container mx-auto px-6 py-16">
+             <header class="text-center mb-16">
+                <h1 class="text-4xl sm:text-5xl font-bold text-white">Sigma Platform v2.0: Core Components</h1>
+                <p class="mt-4 text-lg text-gray-400">A look under the hood at our enterprise-grade architecture.</p>
+                <div class="w-24 h-1 bg-cyan-400 mx-auto mt-6"></div>
+            </header>
+
+            <div class="max-w-5xl mx-auto space-y-12">
+                <!-- Infrastructure Layer -->
+                <section class="component-section">
+                    <div class="component-icon bg-blue-500/10 text-blue-400">
+                        <i data-lucide="server-cog"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="component-title">Infrastructure Layer</h2>
+                        <p class="component-description">The rock-solid foundation providing security, orchestration, and state management for the entire platform.</p>
+                        <div class="component-tags">
+                            <span class="component-tag">RKE2</span>
+                            <span class="component-tag">Kafka (Strimzi)</span>
+                            <span class="component-tag">Redis</span>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Application Layer -->
+                <section class="component-section">
+                    <div class="component-icon bg-green-500/10 text-green-400">
+                        <i data-lucide="app-window"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="component-title">Application Layer</h2>
+                        <p class="component-description">A suite of decoupled microservices responsible for data ingestion, processing, and external system integration.</p>
+                         <div class="component-tags">
+                            <span class="component-tag">Email Connector</span>
+                            <span class="component-tag">IM Connectors</span>
+                            <span class="component-tag">Core Message Processor</span>
+                            <span class="component-tag">LLM Orchestration Service</span>
+                            <span class="component-tag">Lark Connector</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- AI/Intelligence Layer -->
+                <section class="component-section">
+                     <div class="component-icon bg-purple-500/10 text-purple-400">
+                        <i data-lucide="brain-circuit"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="component-title">AI / Intelligence Layer</h2>
+                        <p class="component-description">The "brain" of the platform, transforming raw data into actionable insights through a sophisticated multi-agent workflow.</p>
+                         <div class="component-tags">
+                            <span class="component-tag">Multi-Agent Workflow</span>
+                            <span class="component-tag">Local LLMs</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Automation Layer -->
+                <section class="component-section">
+                    <div class="component-icon bg-yellow-500/10 text-yellow-400">
+                        <i data-lucide="git-branch"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="component-title">Automation Layer (CI/CD)</h2>
+                        <p class="component-description">A fully automated GitOps pipeline that ensures rapid, reliable, and auditable delivery of new features and fixes from code to production.</p>
+                         <div class="component-tags">
+                            <span class="component-tag">GitHub Actions</span>
+                            <span class="component-tag">ArgoCD / Flux</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 border-t border-gray-700/50">
+            <div class="container mx-auto px-6 py-4 text-center text-gray-500 text-sm">
+                &copy; 2025 Sigma Platform Project
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigma Platform | Implementation Roadmap</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans">
+
+    <div id="app-container" class="min-h-screen flex flex-col">
+
+        <!-- Header -->
+        <header class="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-lg border-b border-gray-700/50">
+            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <div class="text-2xl font-bold text-white flex items-center">
+                    <span class="text-cyan-400">Σ</span>
+                    <span class="ml-2">Sigma Platform</span>
+                </div>
+                <ul class="flex space-x-8 text-sm font-medium items-center" id="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="background.html" class="nav-link">Project Background</a></li>
+                    <li><a href="evolution.html" class="nav-link">Architecture Evolution</a></li>
+                    <li><a href="platform_v2.html" class="nav-link">Platform v2.0</a></li>
+                    <li><a href="deliverables.html" class="nav-link">Deliverables</a></li>
+                    <li><a href="roadmap.html" class="nav-link">Roadmap</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow container mx-auto px-6 py-16">
+            <header class="text-center mb-16">
+                <h1 class="text-4xl sm:text-5xl font-bold text-white">Phased Implementation Plan</h1>
+                <p class="mt-4 text-lg text-gray-400">A clear, step-by-step path from foundation to production.</p>
+                <div class="w-24 h-1 bg-cyan-400 mx-auto mt-6"></div>
+            </header>
+
+            <div class="relative wrap overflow-hidden p-10 h-full">
+                <div class="timeline-line"></div>
+                <!-- Phase 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-phase">Phase 1: Weeks 1-4</span>
+                        <h3 class="timeline-title">Foundation & MVP Core</h3>
+                        <p class="timeline-description">Deploy core infrastructure (RKE2, Kafka, Redis). Develop and launch the Core Message Processor and initial Email Connector to validate the data pipeline.</p>
+                    </div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="timeline-item">
+                     <div class="timeline-content">
+                        <span class="timeline-phase">Phase 2: Weeks 5-8</span>
+                        <h3 class="timeline-title">Expanding Connectivity & UI</h3>
+                        <p class="timeline-description">Develop Lark and IM Connectors to broaden data sources. Build and deploy the first version of the Frontend Dashboard for user interaction.</p>
+                    </div>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-phase">Phase 3: Weeks 9-12</span>
+                        <h3 class="timeline-title">Intelligence & Automation</h3>
+                        <p class="timeline-description">Deploy the LLM Orchestration Service to introduce AI capabilities. Implement the full GitOps CI/CD pipeline and commence User Acceptance Testing (UAT).</p>
+                    </div>
+                </div>
+
+                <!-- Phase 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-phase">Phase 4: Weeks 13+</span>
+                        <h3 class="timeline-title">Production Hardening & Rollout</h3>
+                        <p class="timeline-description">Conduct comprehensive security audits and performance tuning. Begin phased rollout of the platform to initial user groups and gather feedback.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 border-t border-gray-700/50">
+            <div class="container mx-auto px-6 py-4 text-center text-gray-500 text-sm">
+                &copy; 2025 Sigma Platform Project
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
+</body>
+</html>

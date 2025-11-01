@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigma Platform | Project Background</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans">
+
+    <div id="app-container" class="min-h-screen flex flex-col">
+
+        <!-- Header -->
+        <header class="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-lg border-b border-gray-700/50">
+            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <div class="text-2xl font-bold text-white flex items-center">
+                    <span class="text-cyan-400">Σ</span>
+                    <span class="ml-2">Sigma Platform</span>
+                </div>
+                <ul class="flex space-x-8 text-sm font-medium items-center" id="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="background.html" class="nav-link">Project Background</a></li>
+                    <li><a href="evolution.html" class="nav-link">Architecture Evolution</a></li>
+                    <li><a href="platform_v2.html" class="nav-link">Platform v2.0</a></li>
+                    <li><a href="deliverables.html" class="nav-link">Deliverables</a></li>
+                    <li><a href="roadmap.html" class="nav-link">Roadmap</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow container mx-auto px-6 py-16">
+            <div class="max-w-4xl mx-auto">
+                <header class="text-center mb-16">
+                    <h1 class="text-4xl sm:text-5xl font-bold text-white">Project Background</h1>
+                    <p class="mt-4 text-lg text-gray-400">Understanding the 'Why': The Problems We Set Out to Solve</p>
+                    <div class="w-24 h-1 bg-cyan-400 mx-auto mt-6"></div>
+                </header>
+
+                <div class="prose prose-invert prose-lg max-w-none text-gray-300 space-y-12">
+                    <section>
+                        <h2 class="text-2xl font-semibold text-white">The Initial Challenge</h2>
+                        <p>The project was born from a set of universal, yet acute, user pain points within the modern enterprise environment. Teams were struggling with a digital workplace that was supposed to enhance productivity but was instead creating friction and information overload. Key challenges included:</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>Fragmented Communication:</strong> Critical conversations were scattered across numerous platforms—emails, various IM clients (Slack, Teams, WhatsApp), and internal project tools.</li>
+                            <li><strong>Information Silos:</strong> Data was trapped within these applications, making it nearly impossible to get a holistic view of a project or client relationship without manually checking multiple sources.</li>
+                            <li><strong>Missed Messages & Delayed Actions:</strong> The sheer volume of notifications and channels led to important messages being overlooked, resulting in delayed responses and missed opportunities.</li>
+                            <li><strong>Inefficient Manual Workflows:</strong> A significant amount of time was spent on low-value tasks, such as manually creating tickets in Jira or Lark Tasks based on email requests, copying and pasting information, and reminding team members of action items.</li>
+                        </ul>
+                    </section>
+                
+                    <section>
+                        <h2 class="text-2xl font-semibold text-white">Market Context & Opportunity</h2>
+                        <p>Our initial analysis of the competitive landscape revealed a clear market trend. AI-driven analytics tools were demonstrating the power of post-communication analysis (e.g., meeting summaries), while the rise of "All-in-One" communication platforms showed a strong user desire for consolidation. However, a significant gap existed: no single platform effectively bridged the gap between passive information aggregation and proactive, intelligent action. This presented a clear opportunity for Sigma: to not just gather information, but to understand it and automate the next steps.</p>
+                    </section>
+                
+                    <section>
+                        <h2 class="text-2xl font-semibold text-white">Initial MVP Concept (v1.0)</h2>
+                        <p>To rapidly validate our core hypothesis, the initial Minimum Viable Product (MVP) was scoped to address the most immediate pain point: information aggregation and basic task creation. The v1.0 concept was designed as a simple, lean information aggregation module with a clear, linear workflow:</p>
+                        <ol class="list-decimal pl-5 space-y-2">
+                            <li><strong>Connect:</strong> Establish connections to primary communication channels, focusing initially on emails and a key IM platform.</li>
+                            <li><strong>Aggregate:</strong> Funnel all incoming messages into a central processing hub.</li>
+                            <li><strong>Process:</strong> Perform basic parsing to extract key details from the messages.</li>
+                            <li><strong>Act:</strong> Automatically create a corresponding task in a Lark multi-dimensional table, effectively closing the loop from communication to a trackable action item.</li>
+                        </ol>
+                        <p>This targeted MVP approach was designed to deliver immediate value to a pilot user group and provide crucial feedback that would inform the strategic pivot to the more robust, scalable, and intelligent Platform v2.0.</p>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 border-t border-gray-700/50">
+            <div class="container mx-auto px-6 py-4 text-center text-gray-500 text-sm">
+                &copy; 2025 Sigma Platform Project
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
+</body>
+</html>
